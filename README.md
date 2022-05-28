@@ -50,7 +50,7 @@
 
 - [NumExpr](https://github.com/pydata/numexpr/wiki/Numexpr-Users-Guide) - The numexpr package supplies routines for the fast evaluation of array expressions element-wise by using a vector-based virtual machine. It’s comparable to SciPy’s weave package, but doesn’t require a separate compile step of C or C++ code.
 
-```
+```python
 import numpy as np
 import numexpr as ne
 
@@ -61,7 +61,7 @@ c = ne.evaluate("2*a + 3*b")
 
 - [Cython](https://cython.org/) - Cython is an optimizing static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). It makes writing C extensions for Python as easy as Python itself.
 
-```
+```python
 import numpy as np
 
 def evaluate(a,b):
@@ -80,7 +80,7 @@ c = evaluate(a, b)
 
 - [Numba](https://numba.pydata.org/) - Numba gives you the power to speed up your applications with high-performance functions written directly in Python. With a few annotations, array-oriented and math-heavy Python code can be just-in-time compiled to native machine instructions, similar in performance to C, C++ and Fortran, without having to switch languages or Python interpreters.
 
-```
+```python
 from numba import jit
 import numpy as np
 
@@ -98,7 +98,7 @@ c = evaluate(a, b)
 
 - [Theano](http://www.deeplearning.net/software/theano/) - Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. Theano features tight integration with NumPy, transparent use of a GPU, efficient symbolic differentiation, speed and stability optimizations, dynamic C code generation and extensive unit-testing and self-verification.
 
-```
+```python
 import numpy as np
 import theano.tensor as T
 
@@ -114,7 +114,7 @@ c = f(a, b)
 
 - [PyCUDA](https://mathema.tician.de/software/pycuda/) - PyCUDA lets you access Nvidia’s CUDA parallel computation API from Python.
 
-```
+```python
 import numpy as np
 import pycuda.autoinit
 import pycuda.driver as drv
@@ -139,7 +139,7 @@ evaluate(drv.Out(c), drv.In(a), drv.In(b), block=(400,1,1), grid=(1,1))
 
 - [PyOpenCL](https://mathema.tician.de/software/pyopencl/) - PyOpenCL lets you access GPUs and other massively parallel computing devices from Python.
 
-```
+```python
 import numpy as np
 import pyopencl as cl
 
